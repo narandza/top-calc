@@ -44,7 +44,7 @@ footer {
 
 .display {
   width: 95%;
-  height: 5rem;
+  height: 10rem;
   background-color: #282828;
   border-radius: 15px;
   margin: 0.5rem;
@@ -55,7 +55,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #282828;
+  align-items: center;
   border-radius: 15px;
   margin: 0.5rem;
   width: 95%;
@@ -64,7 +64,26 @@ footer {
 
 .numbers {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: flex;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-size: 25px;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 15px;
+  border: 1px solid #282828;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #282828;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
