@@ -28,6 +28,19 @@ const negate = () => {
   //TODO
 };
 
+// Display
+
+const resultDisplay = document.querySelector(".result-display");
+const operationDisplay = document.querySelector(".operation-display");
+let result = "";
+let equation = "";
+
+const enterNumber = (num) => {
+  if (!result) {
+    resultDisplay.textContent += num;
+  }
+};
+
 // DOM
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, ",", 0, "="];
@@ -87,7 +100,7 @@ numbers.forEach((number) => {
   number === "=" && numberButton.classList.add("primary");
   numberButton.textContent = number;
   numberButton.addEventListener("click", (e) => {
-    console.log(e.target.textContent);
+    enterNumber(e.target.textContent);
   });
   calcBodyNumbers.appendChild(numberButton);
 });
