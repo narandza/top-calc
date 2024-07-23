@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+body {
+  background-color: #282828;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+header {
+  color: #382bf0;
+  height: 5vh;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+main {
+  height: 90vh;
+}
+
+footer {
+  padding-bottom: 2rem;
+}
+
+.calc {
+  background-color: #121212;
+  width: 20vw;
+  height: 60vh;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display {
+  width: 95%;
+  height: 5rem;
+  background-color: #282828;
+  border-radius: 15px;
+  margin: 0.5rem;
+  text-align: right;
+}
+
+.calc-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #282828;
+  border-radius: 15px;
+  margin: 0.5rem;
+  width: 95%;
+  height: 100%;
+}
+
+.numbers {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
