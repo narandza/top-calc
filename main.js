@@ -20,17 +20,25 @@ const operation = (a, b, operation) => {
   operation(a, b);
 };
 
+const clear = () => {
+  //todo
+};
+
+const negate = () => {
+  //TODO
+};
+
+// DOM
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, ",", 0, "="];
+
 const operatingFunctions = [
   {
-    name: "add",
-    function: add,
-    symbol: "+",
+    name: "negate",
+    function: negate,
+    symbol: "+/-",
   },
-  {
-    name: "subtract",
-    function: subtract,
-    symbol: "-",
-  },
+
   {
     name: "multiply",
     function: multiply,
@@ -41,18 +49,42 @@ const operatingFunctions = [
     function: divide,
     symbol: "/",
   },
+  {
+    name: "clear",
+    function: clear,
+    symbol: "C",
+  },
+  {
+    name: "add",
+    function: add,
+    symbol: "+",
+  },
+  {
+    name: "subtract",
+    function: subtract,
+    symbol: "-",
+  },
 ];
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const calcBodyNumbers = document.querySelector(".buttons-container");
 
-// DOM
+operatingFunctions.forEach((operation) => {
+  const operationButton = document.createElement("div");
+  operationButton.classList.add("button");
+  operationButton.classList.add("opBtn");
+  operationButton.textContent = operation.symbol;
 
-const calcBodyNumbers = document.querySelector(".numbers");
+  operationButton.addEventListener("click", () => {
+    console.log("clicked");
+  });
+  calcBodyNumbers.appendChild(operationButton);
+});
 
 numbers.forEach((number) => {
   const numberButton = document.createElement("div");
   numberButton.classList.add("button");
   numberButton.classList.add("num");
+  number === "=" && numberButton.classList.add("primary");
   numberButton.textContent = number;
   numberButton.addEventListener("click", (e) => {
     console.log(e.target.textContent);

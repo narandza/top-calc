@@ -34,8 +34,8 @@ footer {
 
 .calc {
   background-color: #121212;
-  width: 20vw;
-  height: 60vh;
+  max-width: 20vw;
+  max-height: 60vh;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ footer {
 
 .display {
   width: 95%;
-  height: 10rem;
+  height: 7rem;
   background-color: #282828;
   border-radius: 15px;
   margin: 0.5rem;
@@ -62,7 +62,7 @@ footer {
   height: 100%;
 }
 
-.numbers {
+.buttons-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
@@ -86,4 +86,8 @@ footer {
   background-color: #282828;
   transition-timing-function: ease;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.primary {
+  background-color: #382bf0;
 }
