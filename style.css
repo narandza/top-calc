@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #282828;
+  background-color: #121212;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -26,83 +26,57 @@ header {
 }
 
 main {
-  height: 90vh;
+  height: 100vh;
 }
 
 footer {
   padding-bottom: 2rem;
 }
 
-.calc {
-  background-color: #121212;
-  max-width: 20vw;
-  max-height: 60vh;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.display {
-  width: 90%;
-  height: 7rem;
-  background-color: #282828;
-  border-radius: 15px;
-  margin: 0.7rem;
-  text-align: right;
-  font-family: "VT323", monospace;
-  color: #cccc00;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.operation-display {
-  font-size: 30px;
-}
-
-.result-display {
-  font-size: 50px;
-}
-
-.calc-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px;
-  margin: 0.5rem;
-  width: 95%;
-  height: 100%;
-}
-
-.buttons-container {
+.calculator {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 25px;
-  width: 5rem;
-  height: 3rem;
-  border-radius: 15px;
-  border: 1px solid #282828;
+  color: #fff;
   cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #000;
+  outline: none;
+  background-color: #282828;
 }
 
 .button:hover {
-  background-color: #282828;
-  transition-timing-function: ease;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-color: #161616;
 }
 
-.primary {
-  background-color: #382bf0;
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: #908d96;
+  font-family: "VT323", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.current-operand {
+  font-size: 2.5rem;
 }
